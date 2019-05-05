@@ -5,4 +5,4 @@ Just include color_list.js/.json and colorAssigner.js in your application and ca
 
 To check how it works open index.html in the web browser.
 
-Note: once you refresh the application context that has the 'assignColor()' function the counter will reset and the colors will be assigned from the beginning.
+# Note: once you refresh the application context that has the 'assignColor()' function the counter will reset and the colors will be assigned from the beginning.
