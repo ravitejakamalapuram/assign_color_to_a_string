@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+    <title>Color Assigner</title>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Input String: <input type="string" value="" id="input_string" onkeyup="assignColortoString(this.value);">
+    </div>
+    <table style="margin:30px;" id="color_table">
+        <tr>
+            <th>String</th>
+            <th>Color value</th>
+            <th>Color</th>
+        </tr>
+    </table>
+
+    <script src="color_list.js"></script>
+    <script src="colorAssigner.js"></script>
+    <script>
+        function assignColortoString(string) {
+            let color_new = assignColor(string);
+            if (!document.getElementById(color_new)) {
+                document.getElementById('color_table').innerHTML = document.getElementById('color_table').innerHTML +
+                    `<tr id="${color_new}"><td>${string}</td><td>${color_new}</td><td style="background:${color_new};"></td></tr>`;
+            }
+        }
+    </script>
+</body>
+
+</html>
